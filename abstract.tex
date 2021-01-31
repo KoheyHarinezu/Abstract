@@ -1,0 +1,130 @@
+% Windowsでコンパイルすること
+
+\documentclass[11pt,dvipdfmx]{jarticle}
+
+\usepackage{tikz}
+\usetikzlibrary{intersections, calc, arrows}
+\usepackage{multicol}
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\arrayrulewidth = 1pt
+\newcommand\setTBstruts{\def\T{\rule{0pt}{3ex}}
+                        \def\B{\rule[-2.3ex]{0pt}{0pt}}
+                        \def\A{\rule{0pt}{5ex}}
+                        \def\C{\rule[-5ex]{0pt}{0pt}}}
+
+\setlength{\textheight}{255mm}
+\setlength{\oddsidemargin}{-10mm}
+\setlength{\textwidth}{180mm}
+\setlength{\topmargin}{-20mm}
+\setlength{\columnsep}{1cm}
+\setTBstruts
+\title{\vspace{-2mm}\fontsize{14pt}{0pt}\selectfont 論文概要\vspace{-4.1mm}}
+\author{
+	\begin{tikzpicture}
+		\draw[line width=1.4pt] (0,0)--(16,0)--(16,3.15)--(0,3.15)--cycle;
+		\draw[line width=1.4pt] (0,1.05)--(16,1.05);
+		\draw[line width=1.4pt] (0,2.10)--(16,2.10);
+		\draw[line width=1.4pt] (2.49,0)--(2.49,3.15);
+		\draw[line width=1.4pt] (8,1.05)--(8,3.15);
+		\draw[line width=1.4pt] (8+2.49,1.05)--(8+2.49,3.15);
+		\draw(1.245,2.10+0.525) circle(0) node{学科};
+		\draw(1.245,1.05+0.525) circle(0) node{学生番号};
+		\draw(1.245,0.525) circle(0) node{題目};
+		\draw(1.245+8,2.10+0.525) circle(0) node{指導教員};
+		\draw(1.245+8,1.05+0.525) circle(0) node{氏名};
+		\draw(1.245,2.10+0.525) circle(0) node{学科};
+		\draw(1.245,1.05+0.525) circle(0) node{学生番号};
+		\draw(5.745-0.5,2.10+0.525) circle(0) node{
+		% 学科名を書く
+			１２３４５６７８
+		};
+		\draw(5.745-0.5,1.05+0.525) circle(0) node{
+		% 学籍番号を書く（大文字）
+			１２３４５６７８
+		};
+		\draw(5.745-0.5+8,2.10+0.525) circle(0) node{
+		% 氏名を書く（全角スペースを入れる）
+			A　B　C　D
+		};
+		\draw(5.745-0.5+8,1.05+0.525) circle(0) node{
+		% 指導教員名を書く（全角スペースを入れる）
+			E　F　G　H
+		};
+		\draw(1.245+8,0.525) circle(0) node{
+		% 題目を書く
+			ABCDEFG
+		};
+	\end{tikzpicture}
+}
+\date{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%1段組みにしたいならコメントアウト
+\twocolumn
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%項目数を増やしたい場合はここを増やす
+\noindent
+\hspace{-4.5mm}
+\fontsize{12.5pt}{0pt}\selectfont
+\special{pdf:literal direct q 0.3 w 2 Tr}
+\special{pdf:bcolor [0 0 0]}
+%書き換える　スペースを入れる
+１　はじめに
+\special{pdf: literal direct Q}
+\special{pdf:ecolor}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fontsize{11pt}{18pt}\selectfont
+\indent
+%本文はここから
+１２３４５６７８９０
+１２３４５６７８９０
+１２３４５６７８９０
+\mbox{}\\\mbox{}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\hspace{-3.5mm}
+\fontsize{12.5pt}{0pt}\selectfont
+\special{pdf:literal direct q 0.3 w 2 Tr}
+\special{pdf:bcolor [0 0 0]}
+%書き換える
+２
+\special{pdf: literal direct Q}
+\special{pdf:ecolor}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fontsize{11pt}{18pt}\selectfont
+\indent
+%本文はここから
+１２３４５６７８９０
+１２３４５６７８９０
+１２３４５６７８９０
+\mbox{}\\\mbox{}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\hspace{-3.5mm}
+\fontsize{12.5pt}{0pt}\selectfont
+\special{pdf:literal direct q 0.3 w 2 Tr}
+\special{pdf:bcolor [0 0 0]}
+%書き換える
+３
+\special{pdf: literal direct Q}
+\special{pdf:ecolor}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fontsize{11pt}{18pt}\selectfont
+\indent
+%本文はここから
+１２３４５６７８９０
+１２３４５６７８９０
+１２３４５６７８９０
+\mbox{}\\\mbox{}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
