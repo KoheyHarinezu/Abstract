@@ -1,8 +1,7 @@
-% Windowsでコンパイルすること
-
 \documentclass[11pt,dvipdfmx]{jarticle}
 
 \usepackage{tikz}
+\tikzstyle{bag} = [align=center]
 \usetikzlibrary{intersections, calc, arrows}
 \usepackage{multicol}
 \usepackage{titlesec}
@@ -24,15 +23,19 @@
 \title{\vspace{-2mm}\fontsize{14pt}{0pt}\selectfont 論文概要\vspace{-4.1mm}}
 \author{
 	\begin{tikzpicture}
+		\fontsize{12.045pt}{18.067pt}\selectfont
 		\draw[line width=1.4pt] (0,0)--(16,0)--(16,3.15)--(0,3.15)--cycle;
+		% \draw[line width=1.4pt] (0,-0.525)--(16,-0.525)--(16,3.15)--(0,3.15)--cycle; %題目改行ver
 		\draw[line width=1.4pt] (0,1.05)--(16,1.05);
 		\draw[line width=1.4pt] (0,2.10)--(16,2.10);
 		\draw[line width=1.4pt] (2.49,0)--(2.49,3.15);
+		% \draw[line width=1.4pt] (2.49,-0.525)--(2.49,3.15);　%題目改行ver
 		\draw[line width=1.4pt] (8,1.05)--(8,3.15);
 		\draw[line width=1.4pt] (8+2.49,1.05)--(8+2.49,3.15);
 		\draw(1.245,2.10+0.525) circle(0) node{学科};
 		\draw(1.245,1.05+0.525) circle(0) node{学生番号};
 		\draw(1.245,0.525) circle(0) node{題目};
+		% \draw(1.245,0.525-0.2625) circle(0) node{題目};　%題目改行ver
 		\draw(1.245+8,2.10+0.525) circle(0) node{指導教員};
 		\draw(1.245+8,1.05+0.525) circle(0) node{氏名};
 		\draw(1.245,2.10+0.525) circle(0) node{学科};
@@ -53,10 +56,15 @@
 		% 指導教員名を書く（全角スペースを入れる）
 			E　F　G　H
 		};
-		\draw(1.245+8,0.525) circle(0) node{
+		\draw(1.245+8,0.525) circle(0) node[bag]{
 		% 題目を書く
 			ABCDEFG
 		};
+		% \draw(1.245+8,0.525-0.2625) circle(0) node[bag]{
+		% % 題目を書く 改行ver
+		% 	ABCD\\
+		% 	EFG
+		% };
 	\end{tikzpicture}
 }
 \date{}
@@ -74,15 +82,15 @@
 %項目数を増やしたい場合はここを増やす
 \noindent
 \hspace{-4.5mm}
-\fontsize{12.5pt}{0pt}\selectfont
+\fontsize{12.045pt}{18.067pt}\selectfont
 \special{pdf:literal direct q 0.3 w 2 Tr}
 \special{pdf:bcolor [0 0 0]}
-%書き換える　スペースを入れる
+%書き換える
 １　はじめに
 \special{pdf: literal direct Q}
 \special{pdf:ecolor}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\fontsize{11pt}{18pt}\selectfont
+\fontsize{10.539pt}{15.809pt}\selectfont
 \indent
 %本文はここから
 １２３４５６７８９０
@@ -92,7 +100,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
 \hspace{-3.5mm}
-\fontsize{12.5pt}{0pt}\selectfont
+\fontsize{12.045pt}{18.067pt}\selectfont
 \special{pdf:literal direct q 0.3 w 2 Tr}
 \special{pdf:bcolor [0 0 0]}
 %書き換える
@@ -100,7 +108,7 @@
 \special{pdf: literal direct Q}
 \special{pdf:ecolor}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\fontsize{11pt}{18pt}\selectfont
+\fontsize{10.539pt}{15.809pt}\selectfont
 \indent
 %本文はここから
 １２３４５６７８９０
@@ -110,7 +118,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
 \hspace{-3.5mm}
-\fontsize{12.5pt}{0pt}\selectfont
+\fontsize{12.045pt}{18.067pt}\selectfont
 \special{pdf:literal direct q 0.3 w 2 Tr}
 \special{pdf:bcolor [0 0 0]}
 %書き換える
@@ -118,7 +126,7 @@
 \special{pdf: literal direct Q}
 \special{pdf:ecolor}\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\fontsize{11pt}{18pt}\selectfont
+\fontsize{10.539pt}{15.809pt}\selectfont
 \indent
 %本文はここから
 １２３４５６７８９０
